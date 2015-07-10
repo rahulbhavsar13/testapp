@@ -26,6 +26,8 @@ footer.footer
 
 div(sparkline="", data-bar-color="#cfdbe2", data-height="100", data-bar-width="10", data-bar-spacing="5", values="1,0,4,9,5,7,8,9,5,7,8,4,7")
 
+flot(dataset='splineData', options='splineOptions', height="250px")
+
 h3 
   // START Language list
   .pull-right
@@ -95,13 +97,13 @@ h3
     .row
       .col-lg-12
         // START widget
-        #panelChart9.panel.panel-default(ng-controller="FlotChartController")
+        #panelChart9.panel.panel-default
           .panel-heading
-            paneltool(tool-collapse, tool-refresh="traditional")
+            //paneltool(tool-collapse, tool-refresh="traditional")
             .panel-title Inbound visitor statistics
           .panel-wrapper(collapse="panelChart9")
             .panel-body
-              flot(dataset='splineData', options='splineOptions', height="250px")
+              flot(dataset='splineConfig[0].data', options='splineConfig[0]', height="250px")
         // END widget
     // END chart
     .row

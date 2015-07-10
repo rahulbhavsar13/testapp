@@ -3,7 +3,7 @@
  * Utility library to use across the theme
  =========================================================*/
 
-App.service('Utils', ["$window", "APP_MEDIAQUERY", function($window, APP_MEDIAQUERY) {
+App.service('Utils', ["$window", function($window) {
     'use strict';
     
     var $html = angular.element("html"),
@@ -100,7 +100,7 @@ App.service('Utils', ["$window", "APP_MEDIAQUERY", function($window, APP_MEDIAQU
         return $body.hasClass('aside-toggled');
       },
       isMobile: function () {
-        return $win.width() < APP_MEDIAQUERY.tablet;
+        
       }
     };
 }]);
